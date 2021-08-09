@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "984501854285",
+    "project_id": "vocabulary-builder-app-2f2d0",
+    "storage_bucket": "vocabulary-builder-app-2f2d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984501854285:android:10491fe3996d461dbafc04",
+        "android_client_info": {
+          "package_name": "com.jimmy.vocabularybuliderapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984501854285-742pkk3e7gms5dois7qkma7o5m9q6lld.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jimmy.vocabularybuliderapp",
+            "certificate_hash": "f450d663779c48332fbc8da2c8f47dd5625b46ec"
+          }
+        },
+        {
+          "client_id": "984501854285-fs9tghr54m6opvuqe2r68ljtmpc849k6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8TslRdaqDvw1mBcB1uUgehGc8Ge0ZmLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984501854285-fs9tghr54m6opvuqe2r68ljtmpc849k6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
