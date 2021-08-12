@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.firebase.ui.auth.AuthUI
 import com.jimmy.vocabularybuliderapp.databinding.FragmentMainBinding
 
 
@@ -17,7 +19,7 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
+
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
         return binding.root
     }
@@ -25,9 +27,10 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.logoutBtn.setOnClickListener{ logOutOfApp() }
         binding.button.setOnClickListener { rollDice() }
     }
-
+    //This is the function which randomly selects different vocabulary screens.
     fun rollDice(){
         val firstDice = Dice()
         val ranNumb = firstDice.rollTheDice()
@@ -53,6 +56,9 @@ class MainFragment : Fragment() {
             18 -> R.drawable.febrile
             19 -> R.drawable.risible
             20 -> R.drawable.normenclature
+            21 -> R.drawable.solicitudeee
+            22 -> R.drawable.scruple
+            23 -> R.drawable.quota
             else -> R.drawable.capricious
         }
 
@@ -62,13 +68,19 @@ class MainFragment : Fragment() {
 
 
     }
-
+    //This is the class which has the function
+    //which that produces random numbers used to select a random screen
     class Dice {
 
         fun rollTheDice(): Int {
-            val ranNumBer = (0..20).random()
+            val ranNumBer = (0..23).random()
             return ranNumBer
         }
+    }
+    //This function logout the user and returns them to the home fragment
+    fun logOutOfApp(): Unit {
+        AuthUI.getInstance().signOut(requireContext())
+        findNavController().navigate(R.id.action_mainFragment_to_introFragment)
     }
 
 
